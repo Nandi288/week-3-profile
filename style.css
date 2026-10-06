@@ -1,0 +1,213 @@
+body{
+    font-family:Arial , Helvetica, sans-serif;
+    line-height:1.6;
+    color: #222222;
+    background-color: #f7f9fc;
+    padding: 1rem;
+    overflow-x: hidden;
+}
+
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.dark-mode h1, 
+body.dark-mode h3 {
+    color: #ffffff;
+}
+
+body.dark-mode h2,
+body.dark-mode a {
+    color: #6ea8fe;
+}
+
+body.dark-mode .goal-item,
+body.dark-mode .api-card-wrapper {
+    background-color: #2b2b2b;
+    border-color: #444444;
+}
+
+body.dark-mode .theme-btn {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    border-radius:6px;
+}
+
+h1{
+    font-size: 1.75rem;
+    margin-bottom:0.5rem;
+    color:#111111;
+}
+
+h2 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    color: #1a56db;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+p {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+a {
+    color: #1a56db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #555555;
+    margin-top: 0.5rem;
+}
+
+.goals-grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.goal-item {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+/* Theme toggle button */
+.theme-btn {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* GitHub api section */
+.api-card-wrapper {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 0.75rem;
+}
+
+.github-profile-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.github-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.repo-badge {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+body.dark-mode .repo-badge {
+    background: #3a3a3a;
+    color: #ffffff;
+}
+
+.api-status.error {
+    color: #d90429;
+    font-weight: bold;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        padding: 1.75rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .about-container {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .goals-grid .goal-item:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    main, header, footer {
+        max-width: 1050px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        margin-top: 0;
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .goals-grid .goal-item:last-child {
+        grid-column: span 1;
+    }
+}
